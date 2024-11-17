@@ -1,0 +1,67 @@
+# Compilación y artefactos intermedios
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+*.log
+*.ilk
+*.meta
+*.obj
+*.pch
+*.sbr
+
+# Configuración específica de usuario
+.vs/
+*.suo
+*.user
+*.userosscache
+
+# Configuración de desarrollo
+appsettings.Development.json
+appsettings.Local.json
+
+# Publicación y deploy
+publish/
+wwwroot/
+*.pubxml
+*.publishsettings
+
+# Resultados de pruebas
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Dependencias
+node_modules/
+packages/
+
+# Archivos temporales del sistema
+*.tmp
+*.temp
+~$*
+
+# Archivos generados por herramientas
+.idea/
+*.sln.iml
+
+# NuGet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+
+# Configuración y metadatos de Visual Studio Code
+.vscode/
+.vscode/*.code-workspace
+
+# Archivos de configuración del navegador para Blazor WebAssembly
+*.browserlink.cache
+
+# Otros archivos que suelen ser temporales o locales
+*.DS_Store        # macOS
+*.directory       # Linux KDE
+Thumbs.db         # Windows
