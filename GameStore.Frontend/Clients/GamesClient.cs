@@ -40,5 +40,22 @@ public class GamesClient
             ReleaseDate = new DateOnly(1998, 11, 21)
         }
     ];
+
+    private readonly Genre[] genres = new GenresClient().GetGenres();
+    
     public GameSummary[] GetGames()=> [.. games];
+
+    public void AddGame(GameDetails game)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(game.GenreId);
+        var genre = genres.Single(genre => genre.Id == int.Parse(game.GenreId));
+        var GameSummary = new GameSummary
+        {
+            Id = games.Count + 1,
+            Name = game.Name,
+            Genre = genre.Name,
+            Price = game.Price,
+            ReleaseDate = game.ReleaseDate,
+        };
+    }
 }
