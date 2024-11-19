@@ -18,19 +18,18 @@ else
                     <InputText class="form-control" @bind-Value="game.Name" id="name" />
                 </div>
                 <div class="mb-3">
-                    <label for="genre" class="form-label">Genero:</label>
+                    <label for="genre" class="form-label">Género:</label>
                     <InputSelect class="form-select" @bind-Value="game.GenreId" id="genre">
-                        <option value="">Selecciona un Genero</option>
+                        <option value="" disabled selected>Selecciona un Género</option>
                         @foreach (var genre in genres)
                         {
                             <option value="@genre.Id">@genre.Name</option>
-
                         }
                     </InputSelect>
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Precio:</label>
-                    <InputNumber class="form-control" @bind-Value="game.Price" id="price" />
+                    <InputNumber class="form-control" @bind-Value="game.Price" id="price" min="0" />
                 </div>
                 <div class="mb-3">
                     <label for="releaseDate" class="form-label">Fecha De Lanzamiento:</label>
